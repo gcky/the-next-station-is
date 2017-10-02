@@ -245,7 +245,6 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             name: "Moorgate",
             path: "moorgate",
             videoId: "va2wUMRExoY",
-            videoUrl: "https://www.youtube.com/v/va2wUMRExoY?version=3",
             startSeconds: 302,
             description: "",
             lines: ["circle","h&c","metropolitan","northern"]
