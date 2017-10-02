@@ -15,8 +15,16 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
     };
 
     $scope.openVideoModal = function (station) {
-        $scope.videoModalVisible = true;
-        player.loadVideoByUrl(station.videoUrl, station.startSeconds);
+        if (window.innerHeight < window.innerWidth) {
+            $scope.videoModalVisible = true;
+            var videoUrl = "https://www.youtube.com/v/" + 
+                station.videoId + "?version=3";
+            player.loadVideoByUrl(videoUrl, station.startSeconds);
+        } else {
+            var videoLink = "https://www.youtube.com/watch?v=" + 
+                station.videoId + "?t=" + station.startSeconds + "s";
+            window.location.href = videoLink;
+        }
     };
 
     $scope.closeVideoModal = function () {
@@ -29,7 +37,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "001",
             name: "Canary Wharf",
             path: "canary-wharf",
-            videoUrl: "https://www.youtube.com/v/d_q50nCuMA8?version=3",
+            videoId: "d_q50nCuMA8",
             startSeconds: 17,
             description: "",
             lines: ["jubilee"]
@@ -38,7 +46,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "002",
             name: "Tottenham Court Road",
             path: "tottenham-court-road",
-            videoUrl: "https://www.youtube.com/v/d_q50nCuMA8?version=3",
+            videoId: "d_q50nCuMA8",
             startSeconds: 212,
             description: "",
             lines: ["central", "northern"]
@@ -47,7 +55,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "003",
             name: "Pimlico",
             path: "pimlico",
-            videoUrl: "https://www.youtube.com/v/eeEW0WfToJ8?version=3",
+            videoId: "eeEW0WfToJ8",
             startSeconds: 12,
             description: "",
             lines: ["victoria"]
@@ -56,7 +64,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "004/005",
             name: "Edgware Road",
             path: "edgware-road",
-            videoUrl: "https://www.youtube.com/v/eeEW0WfToJ8?version=3",
+            videoId: "eeEW0WfToJ8",
             startSeconds: 188,
             description: "",
             lines: ["circle", "district", "h&c", "bakerloo"]
@@ -65,7 +73,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "006",
             name: "Euston Square",
             path: "euston-square",
-            videoUrl: "https://www.youtube.com/v/skPxxwoCfXs?version=3",
+            videoId: "skPxxwoCfXs",
             startSeconds: 12,
             description: "",
             lines: ["circle", "h&c", "metropolitan"]
@@ -74,7 +82,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "007",
             name: "Arsenal",
             path: "arsenal",
-            videoUrl: "https://www.youtube.com/v/skPxxwoCfXs?version=3",
+            videoId: "skPxxwoCfXs",
             startSeconds: 204,
             description: "",
             lines: ["piccadilly"]
@@ -83,7 +91,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "008",
             name: "Wood Lane",
             path: "wood-lane",
-            videoUrl: "https://www.youtube.com/v/ui-MHqbIhIQ?version=3",
+            videoId: "ui-MHqbIhIQ",
             startSeconds: 12,
             description: "",
             lines: ["circle", "h&c"]
@@ -92,7 +100,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "009",
             name: "Oxford Circus",
             path: "oxford-circus",
-            videoUrl: "https://www.youtube.com/v/ui-MHqbIhIQ?version=3",
+            videoId: "ui-MHqbIhIQ",
             startSeconds: 240,
             description: "",
             lines: ["bakerloo", "central", "victoria"]
@@ -101,7 +109,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "010",
             name: "Stratford",
             path: "stratford",
-            videoUrl: "https://www.youtube.com/v/tZDuksoGI-c?version=3",
+            videoId: "tZDuksoGI-c",
             startSeconds: 10,
             description: "",
             lines: ["central", "jubilee"]
@@ -110,7 +118,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "011",
             name: "High Street Kensington",
             path: "high-street-kensington",
-            videoUrl: "https://www.youtube.com/v/tZDuksoGI-c?version=3",
+            videoId: "tZDuksoGI-c",
             startSeconds: 270,
             description: "",
             lines: ["circle", "district"]
@@ -119,7 +127,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "012",
             name: "Ravenscourt Park",
             path: "ravenscourt-park",
-            videoUrl: "https://www.youtube.com/v/o3Bt8Jso5z8?version=3",
+            videoId: "o3Bt8Jso5z8",
             startSeconds: 14,
             description: "",
             lines: ["district"]
@@ -128,7 +136,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "013",
             name: "Regent's Park",
             path: "regents-park",
-            videoUrl: "https://www.youtube.com/v/o3Bt8Jso5z8?version=3",
+            videoId: "o3Bt8Jso5z8",
             startSeconds: 210,
             description: "",
             lines: ["bakerloo"]
@@ -137,7 +145,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "014",
             name: "Mornington Crescent",
             path: "mornington-crescent",
-            videoUrl: "https://www.youtube.com/v/t9E9WBpECrU?version=3",
+            videoId: "t9E9WBpECrU",
             startSeconds: 15,
             description: "",
             lines: ["northern"]
@@ -146,7 +154,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "015",
             name: "Highbury & Islington",
             path: "highbury-islington",
-            videoUrl: "https://www.youtube.com/v/t9E9WBpECrU?version=3",
+            videoId: "t9E9WBpECrU",
             startSeconds: 219,
             description: "",
             lines: ["victoria"]
@@ -155,7 +163,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "016",
             name: "North Acton",
             path: "north-acton",
-            videoUrl: "https://www.youtube.com/v/ezYipMNvXmo?version=3",
+            videoId: "ezYipMNvXmo",
             startSeconds: 19,
             description: "",
             lines: ["central"]
@@ -164,7 +172,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "017",
             name: "Clapham North",
             path: "clapham-north",
-            videoUrl: "https://www.youtube.com/v/ezYipMNvXmo?version=3",
+            videoId: "ezYipMNvXmo",
             startSeconds: 250,
             description: "",
             lines: ["northern"]
@@ -173,7 +181,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "018",
             name: "Warwick Avenue",
             path: "warwick-avenue",
-            videoUrl: "https://www.youtube.com/v/7RLNltQ5aso?version=3",
+            videoId: "7RLNltQ5aso",
             startSeconds: 10,
             description: "",
             lines: ["bakerloo"]
@@ -182,7 +190,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "019",
             name: "Canning Town",
             path: "canning-town",
-            videoUrl: "https://www.youtube.com/v/7RLNltQ5aso?version=3",
+            videoId: "7RLNltQ5aso",
             startSeconds: 278,
             description: "",
             lines: ["jubilee"]
@@ -191,7 +199,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "020",
             name: "Fulham Broadway",
             path: "fulham-broadway",
-            videoUrl: "https://www.youtube.com/v/5d5Ml0o4a7Y?version=3",
+            videoId: "5d5Ml0o4a7Y",
             startSeconds: 10,
             description: "",
             lines: ["district"]
@@ -200,7 +208,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "021",
             name: "Stockwell",
             path: "stockwell",
-            videoUrl: "https://www.youtube.com/v/5d5Ml0o4a7Y?version=3",
+            videoId: "5d5Ml0o4a7Y",
             startSeconds: 218,
             description: "",
             lines: ["northern","victoria"]
@@ -209,7 +217,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "022",
             name: "Russell Square",
             path: "russell-square",
-            videoUrl: "https://www.youtube.com/v/9owc59mc1LI?version=3",
+            videoId: "9owc59mc1LI",
             startSeconds: 15,
             description: "",
             lines: ["piccadilly"]
@@ -218,7 +226,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "023",
             name: "Turnham Green",
             path: "turnham-green",
-            videoUrl: "https://www.youtube.com/v/9owc59mc1LI?version=3",
+            videoId: "9owc59mc1LI",
             startSeconds: 293,
             description: "",
             lines: ["district", "piccadilly"]
@@ -227,7 +235,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "024",
             name: "Westminster",
             path: "westminster",
-            videoUrl: "https://www.youtube.com/v/va2wUMRExoY?version=3",
+            videoId: "va2wUMRExoY",
             startSeconds: 10,
             description: "",
             lines: ["circle","district","jubilee"]
@@ -236,6 +244,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             id: "025",
             name: "Moorgate",
             path: "moorgate",
+            videoId: "va2wUMRExoY",
             videoUrl: "https://www.youtube.com/v/va2wUMRExoY?version=3",
             startSeconds: 302,
             description: "",

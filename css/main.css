@@ -15,6 +15,7 @@ body {
 nav {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 80px 15px 70px 15px;
   min-height: 106px;
@@ -32,13 +33,36 @@ nav h1, nav input {
   align-self: center;
 }
 
+nav h1 {
+  text-align: center;
+}
+
 nav input {
   background: none;
+  max-width: 85vw;
   border: none;
   border-bottom: 3px solid #888;
   outline: none;
   color: #888;
   text-transform: lowercase;
+}
+
+@media screen and (max-width: 1018px) {
+  nav {
+      justify-content: center;
+  }
+
+  nav h1 {
+    padding: 0;
+  }
+
+  nav input {
+    text-align: center;
+    background: rgba(255,255,255,.2);
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
 }
 
 .station-grid {
@@ -68,12 +92,32 @@ nav input {
   transform-origin: center center;
 }
 
-.station-block:not(.zoomed):hover {
+.station-block:hover {
   z-index: 2;
   transform: scale(1.2);
   box-shadow: 0 0 50px rgba(0,0,0,0.5);
   border-radius: 10px;
   transition: z-index 1ms linear 1ms, all 0.2s ease-out;
+}
+
+@media screen and (max-width: 511px) {
+  .station-container {
+    width: 100vw;
+    height: 30vh;
+  }
+
+  .station-block {
+    width: calc(100vw - 20px);
+    height: calc(30vh - 20px);
+    transition: none;
+  }
+
+  .station-block:hover {
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+    transition: none;
+  }
 }
 
 .station-block h4 {
@@ -98,13 +142,6 @@ nav input {
 
 .station-block.smaller h3 {
   font-size: 1.77rem;
-}
-
-.zoomed {
-  transform: scale(2);
-  opacity: 0;
-  z-index: 12;
-  transition: all 0.3s ease-out;
 }
 
 .video-modal {
@@ -160,12 +197,10 @@ nav input {
 
 .show-video.ng-show {
   transform: translateY(0);
-  /* transform: scale(1); */
   opacity: 1;
 }
 
 .show-video.ng-hide {
   transform: translateY(300px);
-  /* transform: scale(2); */
   opacity: 0;
 }
