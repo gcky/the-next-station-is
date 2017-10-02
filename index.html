@@ -23,7 +23,7 @@
         </nav>
         <div class="station-grid">
             <div ng-repeat="(key,station) in stations | filter:{name: stationskey}" id="{{station.path}}" class="station-container" ng-click="openVideoModal(station)">
-                <div id="{{station.path}}-dy" class="station-block {{station.long ? 'smaller' : ''}}" style="background-image: url(css/img/{{station.path}}.jpg)">
+                <div id="{{station.path}}-dy" class="station-block {{station.long ? 'smaller' : ''}}" style="background-image: url(css/img/{{station.path}}-min.jpg)">
                     <h4>{{station.id}}</h4>
                     <h3>{{station.name}}</h3>
                 </div>
