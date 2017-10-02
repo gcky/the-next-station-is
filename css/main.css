@@ -1,0 +1,170 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1a1a;
+}
+
+.main-content {
+  max-width: 1024px;
+  margin: 0 auto 30px auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 80px 15px 70px 15px;
+  min-height: 106px;
+  background: #1a1a1a;
+}
+
+nav h1, nav input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #888;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  padding: 0 20px 0 0;
+  flex-grow: 1;
+  align-self: center;
+}
+
+nav input {
+  background: none;
+  border: none;
+  border-bottom: 3px solid #888;
+  outline: none;
+  color: #888;
+  text-transform: lowercase;
+}
+
+.station-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.station-container {
+  width: 256px;
+  height: 256px;
+  overflow: visible;
+}
+
+.station-block {
+  position: relative;
+  z-index: 1;
+  width: 236px;
+  height: 236px;
+  padding: 10px;
+  background-color: #888;
+  background-size: cover;
+  background-position: center; 
+  overflow: hidden;
+  transition: z-index 1ms linear 0.15s, all 0.2s ease-out;
+  transform-origin: center center;
+}
+
+.station-block:not(.zoomed):hover {
+  z-index: 2;
+  transform: scale(1.2);
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  transition: z-index 1ms linear 1ms, all 0.2s ease-out;
+}
+
+.station-block h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.station-block h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.95rem;
+  opacity: 0.9;
+  text-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.station-block.smaller h3 {
+  font-size: 1.77rem;
+}
+
+.zoomed {
+  transform: scale(2);
+  opacity: 0;
+  z-index: 12;
+  transition: all 0.3s ease-out;
+}
+
+.video-modal {
+  align-items: center;
+  position: fixed;
+  left: 10vw;
+  top: 5vh;
+  z-index: 10;
+  width: 80vw;
+  height: calc(80vw * 0.59);
+  background-color: none;
+  box-shadow: 0 0 80px rgba(255,255,255,0.3);
+}
+
+.darkened-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  background-color: rgba(0,0,0,0.8);
+  transition: 400ms ease-out all;
+}
+
+.darkened-background.ng-show {
+  opacity: 1;
+}
+
+.darkened-background.ng-hide {
+  opacity: 0;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.show-video {
+  transition: 400ms ease-out all;
+}
+
+.show-video.ng-show {
+  transform: translateY(0);
+  /* transform: scale(1); */
+  opacity: 1;
+}
+
+.show-video.ng-hide {
+  transform: translateY(300px);
+  /* transform: scale(2); */
+  opacity: 0;
+}

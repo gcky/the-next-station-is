@@ -1,0 +1,160 @@
+ Aldgate	City of London	London Underground	City	
+Aldgate East	Tower Hamlets	London Underground	City	
+Angel	Islington	London Underground	City	
+* Baker Street	Westminster	London Underground	West End	
+Bank	City of London	London Underground	City	
+Barbican	City of London	London Underground	City	
+Bayswater	Westminster	London Underground	West End	
+Blackfriars LU	City of London	London Underground	City	
+Bond Street	Westminster	London Underground	West End	
+Borough	Southwark	London Underground	City	
+Cannon Street	City of London	London Underground	City	
+* Chancery Lane	Camden	London Underground	City	
+Charing Cross LU	Westminster	London Underground	Both	
+* Covent Garden	Westminster	London Underground	Both	
+* Edgware Road (Bakerloo)	Westminster	London Underground	West End	
+* Edgware Road (Circle)	Westminster	London Underground	West End	
+* Embankment	Westminster	London Underground	Both	
+* Euston LU	Camden	London Underground	Both	
+* Euston Square	Camden	London Underground	Both	
+Farringdon	Islington	London Underground	City	
+Gloucester Road	Kensington & Chelsea	London Underground	West End	
+Goodge Street	Camden	London Underground	Both	
+* Great Portland Street	Westminster	London Underground	West End	
+Green Park	Westminster	London Underground	West End	
+* High Street Kensington	Kensington & Chelsea	London Underground	West End	
+Holborn	Camden	London Underground	Both	
+Hyde Park Corner	Westminster	London Underground	West End	
+King's Cross St Pancras LU	Camden	London Underground	Both	
+Knightsbridge	Kensington & Chelsea	London Underground	West End	
+Lambeth North	Lambeth	London Underground	Both	
+Lancaster Gate	Westminster	London Underground	West End	
+Leicester Square	Westminster	London Underground	Both	
+Liverpool Street LU	City of London	London Underground	City	
+London Bridge LU	Southwark	London Underground	City	
+Mansion House	City of London	London Underground	City	
+Marble Arch	Westminster	London Underground	West End	
+Marylebone LU	Westminster	London Underground	West End	
+Monument	City of London	London Underground	City	
+Moorgate	City of London	London Underground	City	
+Old Street	Islington	London Underground	City	
+* Oxford Circus	Westminster	London Underground	West End	
+Paddington	Westminster	London Underground	West End		
+Piccadilly Circus	Westminster	London Underground	West End	
+* Pimlico	Westminster	London Underground	West End	
+Queensway	Westminster	London Underground	West End	
+* Regent's Park	Westminster	London Underground	West End	
+* Russell Square	Camden	London Underground	Both	
+Sloane Square	Kensington & Chelsea	London Underground	West End	
+South Kensington	Kensington & Chelsea	London Underground	West End	
+Southwark	Southwark	London Underground	N/A	
+St James's Park	Westminster	London Underground	West End	
+St Paul's	City of London	London Underground	City	
+Temple	Westminster	London Underground	Both	
+* Tottenham Court Road	Westminster	London Underground	Both	
+* Tower Hill	Tower Hamlets	London Underground	City	
+Victoria LU	Westminster	London Underground	West End	
+* Warren Street	Camden	London Underground	Both	
+Waterloo	Lambeth	London Underground	Both	
+* Westminster	Westminster	London Underground	Both
+Archway	Islington	London Underground	Also in zone 3
+* Arsenal	Islington	London Underground	
+Barons Court	Hammersmith and Fulham	London Underground	
+Belsize Park	Camden	London Underground	
+Bermondsey	Southwark	London Underground	
+Bethnal Green	Tower Hamlets	London Underground	
+Bow Road	Tower Hamlets	London Underground	
+Brixton LU	Lambeth	London Underground	
+Bromley-by-Bow	Tower Hamlets	London Underground	Also in zone 3
+Caledonian Road	Islington	London Underground	
+Camden Town	Camden	London Underground	
+* Canary Wharf	Tower Hamlets	London Underground	
+Canning Town	Newham	London Underground	Also in zone 3
+Chalk Farm	Camden	London Underground	
+* Clapham Common	Lambeth	London Underground	
+* Clapham North	Lambeth	London Underground	
+* Clapham South	Wandsworth	London Underground	Also in zone 3
+Earl's Court	Kensington and Chelsea	London Underground	Also in zone 1
+* East Acton	Hammersmith and Fulham	London Underground	
+East Putney	Wandsworth	London Underground	Also in zone 3
+Elephant & Castle LU	Southwark	London Underground	Also in zone 1
+Finchley Road	Camden	London Underground	
+Finsbury Park LU	Islington	London Underground	
+Fulham Broadway	Hammersmith and Fulham	London Underground	
+Goldhawk Road	Hammersmith and Fulham	London Underground	
+Hammersmith Hammersmith and Fulham	London Underground	
+Hampstead	Camden	London Underground	Also in zone 3
+* Highbury & Islington	Islington	London Underground	
+Holland Park	Kensington and Chelsea	London Underground	
+Holloway Road	Islington	London Underground	
+Kennington	Lambeth	London Underground	
+Kensal Green	Brent	London Underground	
+Kentish Town	Camden	London Underground	
+Kilburn	Brent	London Underground	
+Kilburn Park	Brent	London Underground	
+Ladbroke Grove	Kensington and Chelsea	London Underground	
+Latimer Road	Kensington and Chelsea	London Underground	
+Maida Vale	Westminster	London Underground	
+Manor House	Hackney	London Underground	Also in zone 3
+Mile End	Tower Hamlets	London Underground	
+* Mornington Crescent	Camden	London Underground	
+* North Acton	Ealing	London Underground	Also in zone 3
+North Greenwich	Greenwich	London Underground	Also in zone 3
+Notting Hill Gate	Kensington and Chelsea	London Underground	Also in zone 1
+Oval	Lambeth	London Underground	
+Parsons Green	Hammersmith and Fulham	London Underground	
+Putney Bridge	Hammersmith and Fulham	London Underground	
+Queen's Park	Brent	London Underground	
+* Ravenscourt Park	Hammersmith and Fulham	London Underground	
+* Royal Oak	Westminster	London Underground	
+Shepherd's Bush	Hammersmith and Fulham	London Underground	
+Shepherd's Bush Market	Hammersmith and Fulham	London Underground	
+St. John's Wood	Westminster	London Underground	
+* Stamford Brook	Hounslow	London Underground	
+Stepney Green	Tower Hamlets	London Underground	
+* Stockwell	Lambeth	London Underground	
+* Stratford	Newham	London Underground	Also in zone 3
+Swiss Cottage	Camden	London Underground	
+Tufnell Park	Islington	London Underground	
+* Turnham Green	Hounslow	London Underground	Also in zone 3
+* Vauxhall LU	Lambeth	London Underground	Also in zone 1
+* Warwick Avenue	Westminster	London Underground	
+West Brompton	Kensington and Chelsea	London Underground	
+West Ham	Newham	London Underground	Also in zone 3
+West Hampstead LU	Camden	London Underground	
+West Kensington	Kensington and Chelsea	London Underground	
+Westbourne Park	Westminster	London Underground	
+Whitechapel	Tower Hamlets	London Underground	
+* White City	Hammersmith and Fulham	London Underground	
+Willesden Green	Brent	London Underground	Also in zone 3
+Willesden Junction	Brent	London Underground	Also in zone 3
+* Wood Lane	Hammersmith and Fulham	London Underground	
+Canada Water	Southwark	London Underground
+
+
+
+
+
+Bank / Monument / Cannon Street / Mansion House
+Aldgate / Aldgate East / Whitechapel / Stepney Green
+Mile End / Bow Road / Bromley-by-Bow / West Ham
+King's Cross / Farringdon / Barbican / Moorgate
+Manor House / Finsbury Park / Holloway Road / Caledonian Road
+Angel / Old Street / Liverpool Street / Bethnal Green
+Blackfriars / Temple / Southwark / Waterloo
+Bermondsey / Canada Water / North Greenwich / Canning Town
+Lambeth North / Borough / Elephant & Castle / Kennington
+Oval / Brixton / Victoria / St James's Park
+Green Park / Piccadilly Circus / Leicester Square / Charing Cross
+St Pauls / Holborn / Goodge Street / Bond Street
+Marble Arch / Lancaster Gate / Hyde Park Corner / Knightsbridge
+Bayswater / Queensway / Notting Hill Gate / Holland Park
+Sloane Square / South Kensington / Gloucester Road / Earl's Court
+West Kensington / West Brompton / Barons court / Hammersmith
+Goldhawk Road / Shepherd's Bush Market / Shepherd's Bush / Latimer Road
+Ladbroke Grove / Westbourne Park / Swiss Cottage / St John's Wood
+Willesden Junction / Kensal Green / Queen's Park / Kilburn Park
+Willesden Green / Kilburn / West Hampstead / Finchley Road
+Hampstead / Belsize Park / Chalk Farm / Camden Town
+Maida Vale / Paddington / Marylebone / London Bridge
+Archway / Tufnell Park / Kentish Town

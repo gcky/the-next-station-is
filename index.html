@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The next station is...</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script> -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body ng-app="theNextStation" ng-controller="MainCtrl">
+    <div class="main-content">
+        <nav>
+            <h1>the next station is </h1>
+            <input id="station-filter" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="stationskey">
+        </nav>
+        <div class="station-grid">
+            <div ng-repeat="(key,station) in stations | filter:{name: stationskey}" id="{{station.path}}" class="station-container" ng-click="openVideoModal(station)">
+                <div id="{{station.path}}-dy" class="station-block {{station.long ? 'smaller' : ''}}" style="background-image: url(css/img/{{station.path}}.jpg)">
+                    <h4>{{station.id}}</h4>
+                    <h3>{{station.name}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-modal show-video" ng-show="videoModalVisible">
+        <div class="video-container">
+            <div id="player"></div>
+            <!-- <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/5ixaLXOVCyw" frameborder="0" allowfullscreen></iframe> -->
+        </div>
+    </div>
+    <div class="darkened-background" ng-show="videoModalVisible" ng-click="closeVideoModal()"></div>
+</body>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/MainCtrl.js"></script>
+
+</html>
