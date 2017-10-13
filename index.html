@@ -18,7 +18,7 @@
 <body ng-app="theNextStation" ng-controller="MainCtrl">
     <div class="main-content">
         <nav>
-            <h1>the next station&nbsp;is </h1>
+            <h1>The next station&nbsp;is</h1>
             <input id="station-filter" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="stationskey">
         </nav>
         <div class="station-grid">
@@ -29,11 +29,11 @@
                 </div>
             </div>
         </div>
+        <div class="copyright">&copy; 2017 <a href="http://gcky.github.io/">Gordon Cheng</a></div>
     </div>
     <div class="video-modal show-video" ng-show="videoModalVisible">
         <div class="video-container">
             <div id="player"></div>
-            <!-- <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/5ixaLXOVCyw" frameborder="0" allowfullscreen></iframe> -->
         </div>
     </div>
     <div class="darkened-background" ng-show="videoModalVisible" ng-click="closeVideoModal()"></div>
