@@ -249,6 +249,24 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             description: "",
             lines: ["circle","h&c","metropolitan","northern"]
         },
+        {
+            id: "026",
+            name: "Chalk Farm",
+            path: "chalk-farm",
+            videoId: "i7MqdmmIBSc",
+            startSeconds: 12,
+            description: "",
+            lines: ["northern"]
+        },
+        {
+            id: "027",
+            name: "Warren Street",
+            path: "warren-street",
+            videoId: "i7MqdmmIBSc",
+            startSeconds: 304,
+            description: "",
+            lines: ["victoria","northern"]
+        },
     ];
 
 }]);
