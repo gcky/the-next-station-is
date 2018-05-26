@@ -1,0 +1,66 @@
+.wiki-intro, .wiki-intro a {
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+    color: white;
+    opacity: .8;
+}
+
+.wiki-intro {
+    padding-bottom: 30px;
+}
+
+.wiki-intro a {
+    font-style: italic;
+    opacity: .7;
+}
+
+.station-title {
+    padding-bottom: 5px;
+}
+
+.station-title h1 {
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+}
+
+.station-title h3, .station-title h3 a {
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+    opacity: .8;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.station-title h3 a i {
+    font-size: 1.3rem;
+}
+
+.station-title h3 a:hover {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1296px) {
+    .wiki-intro {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+@media screen and (max-width: 511px) {
+    .wiki-intro {
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .station-title h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .station-title h3, .station-title h3 a {
+        font-size: 1.3rem;
+    }
+}

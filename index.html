@@ -9,34 +9,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-animate.min.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700" rel="stylesheet">
 </head>
 
 <body ng-app="theNextStation" ng-controller="MainCtrl">
     <div class="main-content">
-        <nav>
+        <nav class="title-bar">
             <h1>the next station&nbsp;is</h1>
             <input id="station-filter" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="stationskey">
         </nav>
-        <div class="station-grid">
+        <p class="loading-prompt">loading...</p>
+        <div class="station-grid heavy">
             <div ng-repeat="(key,station) in stations | filter:{name: stationskey}" id="{{station.path}}" class="station-container" ng-click="openVideoModal(station)">
+                <a href="station.html?station={{station.path}}">
                 <div id="{{station.path}}-dy" class="station-block {{station.long ? 'smaller' : ''}}" style="background-image: url(css/img/{{station.path}}-min.jpg)">
-                    <h4>{{station.id}}</h4>
-                    <h3>{{station.name}}</h3>
+                    <h4><span>{{station.id}}</span></h4>
+                    <h3><span>{{station.name}}</span></h3>
                 </div>
+                </a>
             </div>
         </div>
-        <div class="copyright">&copy; 2017-2018 <a href="http://gcky.github.io/">Gordon Cheng</a></div>
+        <div class="copyright">&copy; 2017-2018 <a href="http://gcky.github.io/">Gordon Cheng</a><br>This is a personal project and is not associated with Transport for London.</div>
     </div>
-    <div class="video-modal show-video" ng-show="videoModalVisible">
-        <div class="video-container">
-            <div id="player"></div>
-        </div>
-    </div>
-    <div class="darkened-background" ng-show="videoModalVisible" ng-click="closeVideoModal()"></div>
+    <div class="station-bg" style="background-image: url(css/img/{{randomStation.path}}-min.jpg)"></div>
 </body>
+<script src="scripts/stations.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/MainCtrl.js"></script>
 

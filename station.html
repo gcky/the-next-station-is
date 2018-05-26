@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The next station is...</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/info.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body ng-app="theNextStation" ng-controller="StationCtrl">
+    <div class="main-content">
+        <nav class="station-title title-bar">
+            <h3><a href="index.html"><i class="material-icons">arrow_back_ios</i>the next station is</a></h3>
+            <h1>{{target.name}}</h1>
+        </nav>
+        <p class="loading-prompt">loading...</p>
+        <div class="heavy">
+            <p class="wiki-intro">{{wikiData}} <a href="{{wikiLink}}">(Excerpt from Wikipedia)</a></p>
+            <div class="video-container">
+                <div id="player"></div>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2017-2018 <a href="http://gcky.github.io/">Gordon Cheng</a><br>This is a personal project and is not associated with Transport for London.</div>
+    </div>
+    <div class="station-bg" style="background-image: url(css/img/{{target.path}}-min.jpg)"></div>
+</body>
+<script src="scripts/stations.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/StationCtrl.js"></script>
+
+</html>

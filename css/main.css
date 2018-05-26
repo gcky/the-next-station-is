@@ -12,7 +12,7 @@ body {
   margin: 0 auto 30px auto;
 }
 
-nav {
+.title-bar {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -20,12 +20,23 @@ nav {
   padding: 80px 15px 70px 0;
   min-height: 106px;
   align-items: flex-start;
-  /* background: #1a1a1a; */
+  animation: fade-in 0.3s ease-out;
 }
 
-nav h1, nav input {
+@keyframes fade-in {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.title-bar h1, .title-bar input {
   font-family: 'Nunito Sans', Arial, sans-serif;
-  color: #AAA;
+  color: rgba(255,255,255,.7);
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
@@ -33,14 +44,14 @@ nav h1, nav input {
   flex-grow: 1;
 }
 
-nav h1 {
-  text-align: center;
+.title-bar h1 {
+  text-align: left;
 }
 
-nav input {
+.title-bar input {
   background: none;
   max-width: 520px;
-  border: 3px solid #333;
+  border: 3px solid rgba(255,255,255,.3);
   border-radius: 10px;
   padding-left: 10px;
   height: 30px;
@@ -50,8 +61,8 @@ nav input {
   transition: 0.2s ease-in-out;
 }
 
-nav input:focus {
-  border-color: #555;
+.title-bar input:focus {
+  border-color: rgba(255,255,255,.7);
   transition: 0.2s ease-in-out;
 }
 
@@ -60,6 +71,25 @@ nav input:focus {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  transform: translateY(20px);
+}
+
+.station-grid.loaded {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.heavy {
+  opacity: 0;
+  transition: 0.3s ease-out;
+  transform: translateY(10px);
+}
+
+.heavy.loaded {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .station-container {
@@ -67,6 +97,10 @@ nav input:focus {
   height: 256px;
   overflow: visible;
   cursor: pointer;
+}
+
+.station-container * {
+  text-decoration: none;
 }
 
 .station-block {
@@ -98,6 +132,7 @@ nav input:focus {
   text-transform: uppercase;
   color: white;
   font-size: 0.8rem;
+  text-shadow: 0 0 5px rgba(0,0,0,.7);
 }
 
 .station-block h3 {
@@ -107,8 +142,7 @@ nav input:focus {
   text-transform: uppercase;
   color: white;
   font-size: 1.95rem;
-  opacity: 0.9;
-  text-shadow: 0 0 20px rgba(0,0,0,0.5);
+  text-shadow: 0 0 20px rgba(0,0,0,.7);
 }
 
 .station-block.smaller h3 {
@@ -125,25 +159,6 @@ nav input:focus {
   height: calc(80vw * 0.59);
   background-color: none;
   box-shadow: 0 0 80px rgba(255,255,255,0.3);
-}
-
-.darkened-background {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9;
-  background-color: rgba(0,0,0,0.8);
-  transition: 400ms ease-out all;
-}
-
-.darkened-background.ng-show {
-  opacity: 1;
-}
-
-.darkened-background.ng-hide {
-  opacity: 0;
 }
 
 .video-container {
@@ -176,15 +191,49 @@ nav input:focus {
   opacity: 0;
 }
 
+.station-bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  opacity: .3;
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.1);
+  transform-origin: center center;
+}
+
 .copyright,
 .copyright a {
   font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
-  color: #888;
+  color: rgba(255,255,255,.5);
 }
 
 .copyright {
   padding-top: 30px;
   text-align: left;
+}
+
+.loading-prompt {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 2rem;
+  opacity: .2;
+}
+
+.loading-prompt.loaded {
+  display: none;
 }
 
 /* 4xn grid */
@@ -201,7 +250,7 @@ nav input:focus {
     width: calc(100% - 20px);
   }
 
-  nav, .copyright {
+  .title-bar, .copyright {
     padding-left: 45px;
   }
 }
@@ -225,23 +274,23 @@ nav input:focus {
 }
 
 @media screen and (max-width: 511px) {
-  nav {
+  .title-bar, .copyright {
     padding-left: 10px;
     padding-right: 0;
     align-items: left;
   }
 
-  nav h1, nav input {
+  .title-bar h1, .title-bar input {
     font-size: 1.7rem;
   }
 
-  nav h1 {
+  .title-bar h1 {
     padding: 0;
     margin: 0;
     height: 10px;
   }
 
-  nav input {
+  .title-bar input {
     width: 90%;
     height: 0;
     transform: translateY(-10px);
@@ -268,6 +317,6 @@ nav input:focus {
   }
 
   .copyright {
-    text-align: center;
+    text-align: left;
   }
 }
