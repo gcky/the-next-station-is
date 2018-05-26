@@ -251,4 +251,22 @@ stations = [
         description: "",
         lines: ["victoria"]
     },
+    {
+        id: "030",
+        name: "Embankment",
+        path: "embankment",
+        videoId: "Uf4gxKpZOlI",
+        startSeconds: 12,
+        description: "",
+        lines: ["bakerloo","circle","district","northern"]
+    },
+    {
+        id: "031",
+        name: "Angel",
+        path: "angel",
+        videoId: "Uf4gxKpZOlI",
+        startSeconds: 407,
+        description: "",
+        lines: ["northern"]
+    },
 ];
