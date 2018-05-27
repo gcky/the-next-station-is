@@ -43,22 +43,6 @@ app.controller('StationCtrl', ['$scope', '$filter', 'wikiService', function($sco
                 $scope.wikiLink = 'https://en.wikipedia.org/wiki/' + normalizedTarget + '_tube_station';
             }
         });
-
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        var player;
-        window.onYouTubeIframeAPIReady = function () {
-            player = new YT.Player('player', {
-                videoId: $scope.target.videoId,
-                playerVars: {
-                    autoplay: 1,
-                    start: $scope.target.startSeconds,
-                    showinfo: 0
-                }
-            });
-        };
     }
 
     angular.element(document).ready(function () {
@@ -67,5 +51,11 @@ app.controller('StationCtrl', ['$scope', '$filter', 'wikiService', function($sco
     });
 
     loadMainContent();
+
+    $scope.playerVars = {
+        autoplay: 1,
+        start: $scope.target.startSeconds,
+        showinfo: 0
+    }
       
 }]);

@@ -12,6 +12,7 @@
     <script src="lib/angular-animate.min.js"></script>
     <script src="lib/ng-infinite-scroll.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="lib/angular-youtube-embed.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/info.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700" rel="stylesheet">
@@ -29,7 +30,8 @@
         <div class="heavy">
             <p class="wiki-intro">{{wikiData}} <a href="{{wikiLink}}">(Excerpt from Wikipedia)</a></p>
             <div class="video-container">
-                <div id="player"></div>
+                    <youtube-video video-id="target.videoId" player-vars="playerVars"></youtube-video>
+                <!-- <div id="player"></div> -->
             </div>
         </div>
         <div class="copyright">&copy; 2017-2018 <a href="http://gcky.github.io/">Gordon Cheng</a><br>This is a personal project and is not associated with Transport for London.</div>
