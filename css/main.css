@@ -56,7 +56,7 @@ body {
   padding-left: 10px;
   height: 30px;
   outline: none;
-  color: #888;
+  color: rgba(255,255,255,.7);
   text-transform: lowercase;
   transition: 0.2s ease-in-out;
 }
@@ -149,22 +149,10 @@ body {
   font-size: 1.77rem;
 }
 
-.video-modal {
-  align-items: center;
-  position: fixed;
-  left: 10vw;
-  top: 5vh;
-  z-index: 10;
-  width: 80vw;
-  height: calc(80vw * 0.59);
-  background-color: none;
-  box-shadow: 0 0 80px rgba(255,255,255,0.3);
-}
-
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;
-	padding-top: 30px;
+	/* padding-top: 30px; */
 	height: 0;
 	overflow: hidden;
 }
@@ -175,20 +163,6 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-}
-
-.show-video {
-  transition: 400ms ease-out all;
-}
-
-.show-video.ng-show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.show-video.ng-hide {
-  transform: translateY(300px);
-  opacity: 0;
 }
 
 .station-bg {
