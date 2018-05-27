@@ -1,1 +1,1 @@
-var app = angular.module('theNextStation', ['ngAnimate']);
+var app = angular.module('theNextStation', ['ngAnimate', 'infinite-scroll']);

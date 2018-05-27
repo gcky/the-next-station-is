@@ -7,8 +7,10 @@
     <title>The next station is...</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="lib/jquery-3.3.1.slim.min.js"></script>
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-animate.min.js"></script>
+    <script src="lib/ng-infinite-scroll.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700" rel="stylesheet">
 </head>
@@ -20,7 +22,7 @@
             <input id="station-filter" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="stationskey">
         </nav>
         <p class="loading-prompt">loading...</p>
-        <div class="station-grid heavy">
+        <div class="station-grid heavy" infinite-scroll='loadMore()' infinite-scroll-distance='2'>
             <div ng-repeat="(key,station) in stations | filter:{name: stationskey}" id="{{station.path}}" class="station-container" ng-click="openVideoModal(station)">
                 <a href="station.html?station={{station.path}}">
                 <div id="{{station.path}}-dy" class="station-block {{station.long ? 'smaller' : ''}}" style="background-image: url(css/img/{{station.path}}-min.jpg)">
