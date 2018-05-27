@@ -51,19 +51,14 @@ app.controller('StationCtrl', ['$scope', '$filter', 'wikiService', function($sco
         var player;
         window.onYouTubeIframeAPIReady = function () {
             player = new YT.Player('player', {
+                videoId: $scope.target.videoId,
                 playerVars: {
+                    autoplay: 1,
+                    start: $scope.target.startSeconds,
                     showinfo: 0
-                },
-                events: {
-                    'onReady': onPlayerReady
                 }
             });
         };
-    }
-
-    function onPlayerReady (event) {
-        let videoUrl = "https://www.youtube.com/v/" + $scope.target.videoId + "?version=3";
-        event.target.loadVideoByUrl(videoUrl, $scope.target.startSeconds);
     }
 
     angular.element(document).ready(function () {
