@@ -24,7 +24,7 @@
         </nav>
         <p class="loading-prompt">loading...</p>
         <div class="station-grid heavy" infinite-scroll='loadMore()' infinite-scroll-distance='2' data-ng-init="onGridLoad()">
-            <div ng-repeat="(key,station) in stations | filter:{name: stationskey}" id="{{station.path}}" class="station-container" ng-click="openVideoModal(station)">
+            <div ng-repeat="(key,station) in stations | filter:{name: stationskey} | limitTo:stationsToShow" id="{{station.path}}" class="station-container" ng-click="openVideoModal(station)">
                 <a href="station.html?station={{station.path}}">
                 <div id="{{station.path}}-dy" class="station-block {{station.long ? 'smaller' : ''}}" style="background-image: url(css/img/{{station.path}}-min.jpg)">
                     <h4><span>{{station.id}}</span></h4>

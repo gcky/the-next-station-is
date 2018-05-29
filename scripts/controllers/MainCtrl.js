@@ -1,7 +1,8 @@
 app.controller('MainCtrl', ['$scope', function ($scope) {
-    $scope.stations = stations.slice(0, 20);
+    $scope.stations = stations;
+    $scope.stationsToShow = 20;
     $scope.loadMore = function() {
-        $scope.stations = stations.slice(0, $scope.stations.length + 5);
+        $scope.stationsToShow += 5;
     };
     $scope.onGridLoad = function () {
         angular.element(document.querySelector('.loading-prompt')).addClass('loaded');
